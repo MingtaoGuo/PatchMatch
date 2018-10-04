@@ -7,4 +7,4 @@ This code mainly implement the algorithm of patch match, for details, please see
 # Results
 |||
 |-|-|
-|https://github.com/MingtaoGuo/Patch_Match_python/blob/master/cup_b.jpg|https://github.com/MingtaoGuo/Patch_Match_python/blob/master/cup_a.jpg|
+|https://github.com/MingtaoGuo/Patch_Match_python/cup_b.jpg|https://github.com/MingtaoGuo/Patch_Match_python/cup_a.jpg|

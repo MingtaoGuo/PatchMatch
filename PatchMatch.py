@@ -116,16 +116,12 @@ def NNF(f, img, img_ref, w_size=7, total_itr=5):
                 for j in range(0, img_w-2):
                     Propatation(f, np.array([i, j]), img, img_ref, w_size, is_even=True)
                     random_search(f, np.array([i, j]), img, img_ref, w_size)
-                if i % 10 == 0:
-                    reconstruct(str(i), f, img, img_ref)
             print("Iteration: %d" % (iteration))
         else:
             for i in range(img_h-2, 0, -1):
                 for j in range(img_w-2, 0, -1):
                     Propatation(f, np.array([i, j]), img, img_ref, w_size, is_even=False)
                     random_search(f, np.array([i, j]), img, img_ref, w_size)
-                if i % 10 == 0:
-                    reconstruct(str(i), f, img, img_ref)
             print("Iteration: %d"%(iteration))
         reconstruct(str(iteration), f, img, img_ref)
 

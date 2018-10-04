@@ -41,8 +41,7 @@ def initialization(A, B):
     return f
 
 def Propatation(f, a, A, B, w_size=7, is_even=True):
-    #f: a->offset, a is coordinates of A, b = a + offset
-    #pick a patch which the center is a, the size is w_size from A
+    #f: a->offset, a is the current coordinate of A, b = a + offset
     minimum = np.inf
     x = a[0]
     y = a[1]

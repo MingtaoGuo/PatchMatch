@@ -5,6 +5,10 @@ This code mainly implement the algorithm of patch match, for details, please see
 
 ![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/patchmatch.jpg)
 # Results
-|||
+|image|reference|
 |-|-|
-|https://github.com/MingtaoGuo/Patch_Match_python/cup_b.jpg|https://github.com/MingtaoGuo/Patch_Match_python/cup_a.jpg|
+|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/cup_b.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/cup_a.jpg)|
+
+|Iteration 1|Iteration 2|Iteration 3|Iteration 4|
+|-|-|-|-|
+|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/first_itr.gif)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/second.gif)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/third_itr.gif)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/fourth_itr.gif)|

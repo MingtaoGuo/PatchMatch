@@ -48,7 +48,6 @@ def initialization(A, B):
 
 def Propatation(f, a, A, B, w_size=7, is_even=True):
     #f: a->offset, a is coordinates of A, b = a + offset
-    #pick a patch which the center is a, the size is w_size from A
     minimum = np.inf
     x = a[0]
     y = a[1]
@@ -140,10 +139,10 @@ def map_show(name, f, A, B):
 
 
 if __name__ == "__main__":
-    img_ref = np.array(Image.open("bike_b.png"))
+    img_ref = np.array(Image.open("cup_b.jpg"))
     h = img_ref.shape[0]
     w = img_ref.shape[1]
-    img = np.array(Image.open("bike_a.png"))
+    img = np.array(Image.open("cup_a.jpg"))
     img_h = img.shape[0]
     img_w = img.shape[1]
     start = time.time()
@@ -154,15 +153,14 @@ if __name__ == "__main__":
         if iteration % 2 !=0:
             for i in range(img_h-1, 0, -1):
                 for j in range(img_w-1, 0, -1):
-                    Propatation(f, np.array([i, j]), img, img_ref, w_size=3, is_even=True)
-                    random_search(f, np.array([i, j]), img, img_ref, w_size=3)
+                    Propatation(f, np.array([i, j]), img, img_ref, w_size=7, is_even=False)
+                    random_search(f, np.array([i, j]), img, img_ref, w_size=7)
                 print(i)
         else:
             for i in range(0, img_h-1):
                 for j in range(0, img_w-1):
-                    Propatation(f, np.array([i, j]), img, img_ref, w_size=3, is_even=False)
-                    random_search(f, np.array([i, j]), img, img_ref, w_size=3)
+                    Propatation(f, np.array([i, j]), img, img_ref, w_size=7, is_even=Ture)
+                    random_search(f, np.array([i, j]), img, img_ref, w_size=7)
                 print(i)
         print("Iteration: %d"%(iteration))
         map_show(str(iteration), f, img, img_ref)
-    a = 0

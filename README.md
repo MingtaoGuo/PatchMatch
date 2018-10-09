@@ -9,7 +9,7 @@ About this code: PatchMatch_V0.py is much slower than PatchMatch.py, but the res
 # Results
 |image|reference|
 |-|-|
-|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/road.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/thomas.jpg)|
+|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/road_.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/thomas.jpg)|
 
 |Iteration 0|Iteration 1/6|Iteration 2/6|Iteration 3/6|Iteration 4/6|Iteration 5/6|Iteration 1|
 |-|-|-|-|-|-|-|

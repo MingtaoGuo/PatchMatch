@@ -11,6 +11,6 @@ About this code: PatchMatch_V0.py is much slower than PatchMatch.py, but the res
 |-|-|
 |![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/cup_b.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/cup_a.jpg)|
 
-|Iteration 1|Iteration 2|Iteration 3|Iteration 4|
-|-|-|-|-|
-|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/first_itr.gif)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/second.gif)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/third_itr.gif)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/fourth_itr.gif)|
+|Iteration 0|Iteration 1/6|Iteration 2/6|Iteration 3/6|Iteration 4/6|Iteration 5/6|Iteration 1|
+|-|-|-|-|-|-|-|
+|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/0.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/1.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/2.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/3.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/4.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/5.jpg)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/6.jpg)|

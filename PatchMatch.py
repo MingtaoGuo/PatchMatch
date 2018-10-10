@@ -113,6 +113,7 @@ def NNS(img, ref, p_size, itr):
                     a = np.array([i, j])
                     propagation(f, a, dist, img_padding, ref, p_size, True)
                     random_search(f, a, dist, img_padding, ref, p_size)
+        print("iteration: %d"%(itr))
     return f
 
 if __name__ == "__main__":

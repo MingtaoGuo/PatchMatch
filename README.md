@@ -17,3 +17,7 @@ This code mainly implement the algorithm of patch match, for details, please see
 |image|reference|
 |-|-|
 |![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/img.png)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/ref.png)|
+
+|Iteration 1|Iteration 2|Iteration 5|
+|-|-|-|
+|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/1_itr.gif)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/2_itr.gif)|![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/5_itr.gif)|

@@ -3,6 +3,12 @@ The algorithm of patch match implemented by python
 # Introduction
 This code mainly implement the algorithm of patch match, for details, please see the paper: [PatchMatch: A Randomized Correspondence Algorithm for Structural Image Editing](http://gfx.cs.princeton.edu/pubs/Barnes_2009_PAR/patchmatch.pdf)
 
+There are two patchmatch code: PatchMatch.py and PatchMatch_Bidirectional.py. The last one serves for the code [DeepImageAnalogy](https://github.com/MingtaoGuo/Deep-image-analogy-TensorFlow)
+#### DeepImageAnalogy example
+|Input|:|Output|::|Input|:|Output|
+|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
+
 
 ![](https://github.com/MingtaoGuo/Patch_Match_python/blob/master/IMAGE/patchmatch.jpg)
 # Results

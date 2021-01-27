@@ -29,7 +29,7 @@ def reconstruction(f, A, B):
     for i in range(A_h):
         for j in range(A_w):
             temp[i, j, :] = B[f[i, j][0], f[i, j][1], :]
-    Image.fromarray(temp).save("reconstruction.png")
+    Image.fromarray(temp).show()
 
 def initialization(A, B, p_size):
     A_h = np.size(A, 0)
@@ -86,33 +86,50 @@ def random_search(f, a, dist, A_padding, B, p_size, alpha=0.5):
             dist[x, y] = d
             f[x, y] = b
         i += 1
-
+            
 def propagation(f, a, dist, A_padding, B, p_size, is_odd):
+    p = p_size // 2
     A_h = np.size(A_padding, 0) - p_size + 1
     A_w = np.size(A_padding, 1) - p_size + 1
     x = a[0]
     y = a[1]
     if is_odd:
-        d_left = cal_distance(a, f[max(x - 1, 0), y], A_padding, B, p_size)
-        d_up = cal_distance(a, f[x, max(y - 1, 0)], A_padding, B, p_size)
+        i_left,j_left = f[max(x - 1, 0), y]
+        i_left = min(i_left+1,A_h-1-p)
+        b_left = np.array([i_left,j_left],dtype="int64")
+        d_left = cal_distance(a,b_left, A_padding, B, p_size)
+        
+        i_up,j_up = f[x, max(y - 1, 0)]
+        j_up = min(j_up+1,A_w-1-p)
+        b_up = np.array([i_up,j_up],dtype="int64")
+        d_up = cal_distance(a, b_up, A_padding, B, p_size)
+        
         d_current = dist[x, y]
         idx = np.argmin(np.array([d_current, d_left, d_up]))
         if idx == 1:
-            f[x, y] = f[max(x - 1, 0), y]
+            f[x, y] = b_left
             dist[x, y] = d_left
         if idx == 2:
-            f[x, y] = f[x, max(y - 1, 0)]
+            f[x, y] = b_up
             dist[x, y] = d_up
     else:
-        d_right = cal_distance(a, f[min(x + 1, A_h-1), y], A_padding, B, p_size)
-        d_down = cal_distance(a, f[x, min(y + 1, A_w-1)], A_padding, B, p_size)
+        i_right,j_right = f[min(x + 1, A_h-1), y]
+        i_right = max(i_right-1,p)
+        b_right = np.array([i_right,j_right],dtype="int64")
+        d_right = cal_distance(a, b_right, A_padding, B, p_size)
+        
+        i_down,j_down = f[x, min(y + 1, A_w-1)]
+        j_down = max(j_down-1,p)
+        b_down = np.array([i_down,j_down],dtype="int64")
+        d_down = cal_distance(a, b_down, A_padding, B, p_size)
+        
         d_current = dist[x, y]
         idx = np.argmin(np.array([d_current, d_right, d_down]))
         if idx == 1:
-            f[x, y] = f[min(x + 1, A_h-1), y]
+            f[x, y] = b_right
             dist[x, y] = d_right
         if idx == 2:
-            f[x, y] = f[x, min(y + 1, A_w-1)]
+            f[x, y] = b_down
             dist[x, y] = d_down
 
 def NNS(img, ref, p_size, itr):
